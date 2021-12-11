@@ -1,0 +1,252 @@
+:root{
+  /* === primary === */
+  --pale-blue:hsl(225, 100%, 94%);
+  --bright-blue:hsl(245, 75%, 52%);
+
+  /* === neutral === */
+
+--very-pale-blue: hsl(225, 100%, 98%);
+--desaturated-blue: hsl(224, 23%, 55%);
+--dark-blue: hsl(223, 47%, 23%);
+
+/* === Typography === */
+
+--medium : 500;
+--bold: 700;
+--black: 900;
+
+/* === utils === */
+
+--margin: 0.75rem;
+--padding: 0.75rem;
+--border-radius:1.25rem;
+--box-shadow:0 0.5rem 1rem var(--dark-blue, 0.15);
+--box-shadow-sm:0 0.125rem .25rem var(--dark-blue, 0.075);
+--box-shadow-lg:0 1rem 3rem var(--dark-blue , 0.175);
+--gap: 10px;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color:var(--pale-blue);
+  color:var(--dark-blue);
+
+}
+.main{
+  width: 100%;
+  max-width: 1400px;
+  display: grid;
+  place-items: center;
+  padding:4.5rem 1.5rem;
+  position: relative;
+}
+
+.main::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url(/images/pattern-background-mobile.svg),no-repeat center center/cover;
+  z-index: -1;
+  top:-50%;
+  right:0;
+
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap:2rem;
+  max-width: 450px;
+  width: 100%;
+  border-radius:var(--border-radius);
+  box-shadow: var(--box-shadow-lg);
+  overflow:hidden;
+  background-color: var(--very-pale-blue);
+
+
+}
+.card__header{
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+.imgContainer{
+  max-width: 100%;
+  display: grid;
+  place-items: center;
+}
+.imgHero{
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  display: block;
+
+}
+
+.card__body{
+  padding: 0 2rem;
+  display: grid;
+  place-items: center;
+  gap: 1.5rem;
+}
+
+.card__body h1{
+  font-size:22px ;
+  font-weight: var(--black);
+  letter-spacing: 0;
+}
+
+.card__body p{
+  width: 100%;
+  font-weight:var(--medium);
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+  text-align: center;
+  padding: 0;
+  color:var(--desaturated-blue);
+}
+
+.card__body .price{
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:2rem;
+  background-color: var(--pale-blue);
+  border-radius:11px;
+}
+.planContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:1.2rem;
+}
+.icon-music{
+  background-color:var(--very-pale-blue);
+  border-radius:50%;
+}
+
+.plan{
+  display: grid;
+  place-items: center;
+}
+
+.plan strong {
+  font-size: 14px;
+  font-weight: var(--black);
+  color:var(--dark-blue);
+}
+.plan p{
+  font-size: 14px;
+  font-weight:var(--medium);
+}
+
+small{
+  cursor: pointer;
+  font-size: 13px;
+  font-weight:var(--bold);
+  color: var(--bright-blue);
+  margin-right:var(--margin);
+  position: relative;
+  transition: all 0.6s ease-in-out;
+}
+
+small:hover {
+  color:hsl(245, 83%, 68%);
+
+}
+
+small::before{
+  content: " ";
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  background-color: var(--bright-blue);
+  transition: all 0.6s ease-in-out;
+}
+
+small:hover::before{
+  width: 0;
+
+}
+
+.card__footer{
+  width: 100%;
+  padding: 0 2rem 2rem;
+  display: grid;
+  place-items: center;
+  gap: 1rem;
+}
+.btn{
+  cursor: pointer;
+  width: 100%;
+  padding:16px 30px;
+  border: none;
+  border-radius:11px;
+  font-size: 15px;
+  font-weight: var(--black);
+  transition: all 0.75s ease-in-out;
+}
+
+
+.btn.btn-primary{
+  background-color:var(--bright-blue);
+  color:var(--very-pale-blue);
+
+}
+
+.btn.btn-primary:hover{
+  background-color:hsl(245, 83%, 68%);
+
+}
+.btn.btn-secondary{
+  background-color:var(--very-pale-blue);
+  color:var(--desaturated-blue);
+}
+
+.btn.btn-secondary:hover{
+  color:var(--dark-blue);
+}
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+
+
+@media (min-width: 768px) {
+
+  .card{
+    width:450px;
+  }
+}
+@media (min-width: 1440px) {
+  .main::before{
+    background:url(/images/pattern-background-desktop.svg) no-repeat,center center/cover;
+  }
+}
