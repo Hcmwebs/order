@@ -134,8 +134,11 @@ body {
   gap: 1.2rem;
 }
 .icon-music {
-  background-color: var(--very-pale-blue);
-  border-radius: 50%;
+  margin-left: var(--margin);
+}
+
+.icon-music circle {
+  fill: var(--very-pale-blue);
 }
 
 .plan {
