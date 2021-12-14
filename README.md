@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Order summary component with just html and css](https://www.frontendmentor.io/solutions/responsive-order-summary-component-with-just-html-and-css-zQRYKEn_H)
+- Live Site URL: [Deployed site on vercel](https://order-lkik0vutu-hcmwebs.vercel.app/)
 
 ## My process
 
@@ -68,4 +68,4 @@ Users should be able to:
 
 ## Acknowledgments
 
-[Frontend Mentor](http://www.frontendmentor.io/) - SMy sincere gratitude to you and to your entire team for tirelessly adding projects after projects every week. The challenges are very much fun and I learn a lot from each one them. Thank you very much .
+[Frontend Mentor](http://www.frontendmentor.io/) - My sincere gratitude to you and to your entire team for tirelessly adding projects after projects every week. The challenges are very much fun and I learn a lot from each one them. Thank you very much .
